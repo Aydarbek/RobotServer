@@ -1,0 +1,4 @@
+Exception in thread "main" java.util.InputMismatchException: For input string: "5230984752093485"
+	at java.util.Scanner.nextInt(Scanner.java:2123)
+	at java.util.Scanner.nextInt(Scanner.java:2076)
+	at Program.main(Program.java:5)

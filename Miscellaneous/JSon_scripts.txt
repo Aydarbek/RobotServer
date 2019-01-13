@@ -1,0 +1,14 @@
+https://jsoneditoronline.org/
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+?{ "list": [ {"task_id": 1, "title": "Сумма чисел"}, {"task_id": 2, "title": "Произвидение"}, {"task_id": 3, "title": "Степень"}, ]}
+
+
+var json_data = '{"list": [' + ' {"task_id": 1, "title": "Сумма чисел"}, ' + ' {"task_id": 2, "title": "Произвидение"},' + ' {"task_id": 3, "title": "Степень"}, ]} ' ;
+
+
+{ "list": [ {"task_id": 1, "title": "Сумма чисел"}, {"task_id": 2, "title": "Произвидение"}, {"task_id": 3, "title": "Степень"} ] }
+
+
+

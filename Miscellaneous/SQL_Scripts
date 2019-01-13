@@ -1,0 +1,51 @@
+getTaskList() // получить список всех всех задач
+
+	SELECT id, task
+	FROM task
+	ORDER BY id;
+
+
+getTaskInfo($task_id) // получить условие задачи
+
+	SELECT id, task, problem, test_in, test_out
+	FROM task
+	LEFT JOIN test
+	ON id = test.task_id
+	AND test_nr = 0
+	WHERE id = $task_id
+
+getLangList() 		//получить список всех доступных языков программирования
+	
+	SELECT lang
+	FROM lang
+	ORDER BY lang
+
+getUserProgram($user_id, $task_id, $lang)	//загрузить код программы пользователя
+	
+	SELECT program, answers
+	FROM prog
+	WHERE task_id = $task_id
+	AND user_id = $user_id
+	AND lang = $lang
+
+runProgram($task_id, $user_id, $lang, $program)		//запустить программу на проверку	
+ SELECT COUNT(*) FROM lang
+ 	WHERE lang = $lang
+
+	$run_id = date("yMD.HMS.") . $user_id . "." . $task_id . "." . $lang;
+	INSERT INTO prog (user_id, task_id, lang, run_id, points, program, answer)
+	VALUES ($user_id, $task_id, $lang, $program, '')
+	return $run.id;
+
+generateFolder()
+..........
+
+getAnswer($run_id)		//получить результаты проверки
+	SELECT answer 
+	FROM prog 
+	WHERE run_id = $run_id
+	return $answer
+
+
+
+

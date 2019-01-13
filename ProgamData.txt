@@ -1,0 +1,25 @@
+init
+wait
+work
+done
+
+C:\Program Files\Java\jdk1.8.0_191\bin\javac 
+D:\Projects\RobotServer\data\init\190102.194030.5.java
+
+"C:\Program Files\Java\jdk1.8.0_191\bin\javac" Program.java 2> compiler.out
+
+java Program < test.0.in> test.0.out 2>&1	//запуск теста 0 с выводом результата в test.0.out
+
+
+
+"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe" Program.cs > compiler.out   	
+					//компиляция C# с выводом в compiler.out
+Program.exe < test.0.in > test.0.out 2>&1	//запуск теста 0 с выводом результата в test.0.out
+
+
+		"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe" Program.cs > compiler.out	
+
+
+Добавить в таблицу БД task поле category.
+
+В таблицу lang добавить стандартный темплейт
