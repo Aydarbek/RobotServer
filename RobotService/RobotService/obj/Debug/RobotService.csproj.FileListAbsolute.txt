@@ -1,6 +1,0 @@
-D:\Projects\RobotServer\RobotService\RobotService\bin\Debug\RobotService.exe.config
-D:\Projects\RobotServer\RobotService\RobotService\bin\Debug\RobotService.exe
-D:\Projects\RobotServer\RobotService\RobotService\bin\Debug\RobotService.pdb
-D:\Projects\RobotServer\RobotService\RobotService\obj\Debug\RobotService.csprojResolveAssemblyReference.cache
-D:\Projects\RobotServer\RobotService\RobotService\obj\Debug\RobotService.exe
-D:\Projects\RobotServer\RobotService\RobotService\obj\Debug\RobotService.pdb
