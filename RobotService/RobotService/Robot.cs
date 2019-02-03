@@ -34,8 +34,17 @@ namespace RobotService
                 {
                     Console.WriteLine("Compilation successful!");
                     foreach (var file in Directory.GetFiles(folder, "*.in"))
-                        RunTest(Path.GetFileName(file),
-                            Path.GetFileName(file).Replace(".in", ".out"));
+                    {
+                        Thread TestThread = new Thread(new ParameterizedThreadStart(Test));
+                        TestThread.Start(file);
+                        Thread.Sleep(3000);
+                        if (TestThread.IsAlive)
+                        {
+                            TestThread.Abort();
+                            TaskKill();
+                        }                           
+                    }
+                    
                 }
                 else
                 {
@@ -69,11 +78,18 @@ namespace RobotService
                 cmd.StandardInput.Close();
                 cmd.WaitForExit();
             } catch (Exception e) { Console.WriteLine(e.Message); }
-        } 
+        }
+
+        private void Test (object file)
+        {
+            RunTest(Path.GetFileName((string)file),
+                            Path.GetFileName((string)file).Replace(".in", ".out"));
+        }
         
 
         abstract protected bool Compile();
 
         abstract protected void RunTest(string InFile, string OutFile);
+        abstract protected void TaskKill();
     }
 }

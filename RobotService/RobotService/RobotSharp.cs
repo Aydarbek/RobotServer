@@ -19,5 +19,9 @@ namespace RobotService
             RunCommand(@"Program.exe < " + InFile + " > " + OutFile + " 2>&1");
         }
 
+        protected override void TaskKill()
+        {
+            RunCommand(@"taskkill /IM program.exe /F");
+        }
     }
 }

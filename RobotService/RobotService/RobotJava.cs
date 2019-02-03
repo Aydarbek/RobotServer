@@ -17,5 +17,10 @@ namespace RobotService
             Console.WriteLine("Run test... " + InFile);
             RunCommand("\"C:\\Program Files\\Java\\jdk1.8.0_191\\bin\\java\" Program < " + InFile + " >" + OutFile + " 2>&1");
         }
+
+        protected override void TaskKill()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
